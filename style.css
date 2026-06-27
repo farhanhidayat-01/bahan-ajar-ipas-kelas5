@@ -1,0 +1,193 @@
+:root {
+    --primary-color: #2E7D32;
+    --secondary-color: #81C784;
+    --accent-color: #FBC02D;
+    --bg-color: #F4F9F4;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* =========================================
+   BAGIAN SAMPUL (COVER)
+========================================= */
+.cover-container {
+    background: linear-gradient(135deg, var(--primary-color), #1B5E20);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 6rem 1rem; 
+}
+.cover-header h1 { margin: 0; font-size: 2.5rem; text-shadow: 1px 1px 4px rgba(0,0,0,0.3); }
+.cover-header .subtitle { font-size: 1.1rem; margin: 5px 0 25px 0; opacity: 0.9; }
+
+.cover-academic {
+    background: rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.cover-academic p { margin: 5px 0; font-size: 1.05rem; }
+
+.logo-kampus { width: 110px; height: auto; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3)); cursor: pointer; transition: transform 0.3s; }
+.logo-kampus:hover { transform: scale(1.05); }
+
+/* =========================================
+   PROFIL PENYUSUN
+========================================= */
+.container { max-width: 800px; margin: 0 auto 30px auto; padding: 0 15px; }
+
+.cover-author {
+    background: var(--card-bg);
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-top: -50px; 
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    border-top: 5px solid var(--accent-color);
+    position: relative;
+    z-index: 10;
+}
+.profile-pic {
+    width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+    border: 4px solid var(--secondary-color); box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 15px; cursor: pointer; transition: transform 0.3s;
+}
+.profile-pic:hover { transform: scale(1.05); }
+
+.badge {
+    background-color: var(--accent-color); color: #333; font-size: 0.85rem;
+    font-weight: bold; padding: 6px 12px; border-radius: 20px; display: inline-block;
+}
+.cover-author h2 { color: var(--primary-color); margin: 15px 0 5px 0; border: none; padding: 0;}
+.cover-author p { margin: 3px 0; font-size: 1rem; color: #555; }
+.cover-author .kampus-text, .cover-author .tahun-text { color: var(--primary-color); font-size: 1.1rem; }
+.cover-author .tahun-text { font-size: 1.2rem; margin-top: 5px; } 
+
+/* =========================================
+   MATERI SECTIONS
+========================================= */
+section:not(.cover-author) {
+    background: var(--card-bg); border-radius: 12px; padding: 25px;
+    margin-bottom: 25px; box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-top: 5px solid var(--secondary-color); transition: transform 0.2s ease;
+}
+section:not(.cover-author):hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.08); }
+h2 { color: var(--primary-color); margin-top: 0; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+
+/* Interactive Boxes */
+.interactive-box, .quiz-container, .sorting-game {
+    background-color: #fcfdfc; padding: 20px; border-radius: 10px;
+    border: 1px solid #e0e0e0; margin-top: 15px;
+}
+
+/* Food Chain & Web */
+.food-chain, .jaring-visual {
+    display: flex; align-items: center; justify-content: center;
+    flex-wrap: wrap; gap: 10px; margin: 20px 0;
+}
+.organism, .jaring-item {
+    background-color: white; padding: 10px 15px; border-radius: 20px;
+    border: 2px solid var(--secondary-color); cursor: pointer;
+    font-weight: bold; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: center;
+}
+.organism:hover { transform: scale(1.1); background-color: var(--primary-color); color: white; border-color: var(--primary-color); }
+.decomposer { border-color: #8D6E63; border-style: dashed; }
+.decomposer:hover { background-color: #795548; border-color: #795548; }
+
+.arrow, .jaring-arrow { font-size: 1.5rem; color: var(--primary-color); font-weight: bold; }
+.cycle-arrow { color: #8D6E63; font-size: 1.2rem; }
+
+/* Pyramid Styles */
+.pyramid-container {
+    display: flex; flex-direction: column; align-items: center; margin: 20px 0; gap: 5px;
+}
+.pyramid-level {
+    background-color: var(--primary-color); color: white; font-weight: bold;
+    text-align: center; padding: 10px; border-radius: 5px; cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s; box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+}
+.pyramid-level:hover { filter: brightness(1.1); transform: scale(1.05); }
+.level-4 { width: 40%; background-color: #F44336; } /* Puncak (Paling sedikit) */
+.level-3 { width: 60%; background-color: #FF9800; }
+.level-2 { width: 80%; background-color: #2196F3; }
+.level-1 { width: 100%; background-color: #4CAF50; } /* Dasar (Paling banyak) */
+
+.info-panel, .feedback-panel {
+    background-color: #FFF9C4; padding: 15px; border-radius: 8px;
+    border-left: 5px solid var(--accent-color); margin-top: 15px;
+    text-align: center; font-weight: bold; box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.energy-box {
+    background-color: #E3F2FD; padding: 15px; border-radius: 8px; border-left: 5px solid #1976D2;
+}
+
+/* Buttons */
+.btn, .btn-item {
+    background-color: var(--primary-color); color: white; border: none; padding: 12px 15px;
+    margin: 5px; border-radius: 8px; cursor: pointer; font-size: 1rem; font-weight: bold;
+    transition: background 0.3s, transform 0.1s; box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+.btn:hover, .btn-item:hover { background-color: #1B5E20; transform: translateY(-2px); }
+
+.quiz-options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+.buttons-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 15px; }
+
+.correct { background-color: #C8E6C9; border-left-color: #2E7D32; color: #1B5E20; display: block;}
+.incorrect { background-color: #FFCDD2; border-left-color: #C62828; color: #B71C1C; display: block;}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .cover-header h1 { font-size: 2rem; }
+    .cover-academic { padding: 12px 20px; }
+}
+
+/* =========================================
+   DOWNLOAD SECTION (BAGIAN 7)
+========================================= */
+.download-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.btn-download {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-download:hover {
+    background-color: #1B5E20;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: #F57C00; /* Warna oranye agar beda dengan modul */
+}
+
+.btn-secondary:hover {
+    background-color: #E65100;
+}

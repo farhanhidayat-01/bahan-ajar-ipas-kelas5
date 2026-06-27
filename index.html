@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPAS Kelas 5 - Harmoni dalam Ekosistem</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        a { text-decoration: none; -webkit-tap-highlight-color: transparent; }
+        .logo-kampus, .profile-pic { cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="cover-container">
+        <div class="cover-header">
+            <h1>Harmoni dalam Ekosistem</h1>
+            <p class="subtitle">Ilmu Pengetahuan Alam dan Sosial (IPAS) - Kelas V</p>
+        </div>
+        
+        <div class="cover-academic">
+            <p><strong>Dosen Pengampu:</strong> Ahmad Tohir, M.Pd.</p>
+            <p><strong>Mata Kuliah:</strong> Pengembangan Bahan Ajar</p>
+        </div>
+
+        <div class="cover-logo">
+            <a href="https://stkipalitb.ac.id/" target="_blank">
+                <img src="logo-kampus.png" alt="Logo STKIP Al Islam Tunas Bangsa" class="logo-kampus">
+            </a>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <section class="cover-author">
+            <a href="https://farhanhidayat-01.github.io/_/" target="_blank">
+                <img src="farhan.png" alt="Foto Farhan Hidayat" class="profile-pic">
+            </a>
+            <br>
+            <span class="badge">Bahan Ajar Interaktif</span>
+            <h2>Farhan Hidayat</h2>
+            <p class="npm-text">NPM: 24020030</p>
+            <p class="prodi-text">Program Studi Pendidikan Guru Sekolah Dasar (PGSD)</p>
+            <br>
+            <p class="kampus-text"><strong>STKIP Al Islam Tunas Bangsa, Bandar Lampung</strong></p>
+            <p class="tahun-text"><strong>2026</strong></p>
+        </section>
+
+        <section id="rantai-makanan">
+            <h2>1. Rantai Makanan (Siklus)</h2>
+            <p>Rantai makanan adalah proses transfer energi makanan pada suatu ekosistem. Dengan adanya pengurai (dekomposer), rantai makanan menjadi sebuah siklus yang berputar.</p>
+            
+            <div class="interactive-box">
+                <p><strong>Siklus Ekosistem Kebun:</strong></p>
+                <div class="food-chain">
+                    <div class="organism" onclick="showInfo('sayur')">🥬 Sayur</div>
+                    <div class="arrow">➡️</div>
+                    <div class="organism" onclick="showInfo('siput')">🐌 Siput</div>
+                    <div class="arrow">➡️</div>
+                    <div class="organism" onclick="showInfo('katak')">🐸 Katak</div>
+                    <div class="arrow">➡️</div>
+                    <div class="organism" onclick="showInfo('ular')">🐍 Ular</div>
+                    <div class="arrow">➡️</div>
+                    <div class="organism decomposer" onclick="showInfo('jamur')">🍄 Jamur</div>
+                    <div class="arrow cycle-arrow">🔄 <small>Kembali ke Sayur</small></div>
+                </div>
+                <div id="organism-info" class="info-panel">Klik makhluk hidup di atas untuk melihat perannya!</div>
+            </div>
+        </section>
+
+        <section id="jaring-jaring">
+            <h2>2. Jaring-Jaring Makanan</h2>
+            <p>Dalam kondisi nyata, produsen dan konsumen di alam jumlahnya bisa lebih dari satu jenis. Kumpulan dari beberapa rantai makanan yang saling tumpang tindih ini disebut <strong>Jaring-Jaring Makanan</strong>.</p>
+            
+            <div class="interactive-box" style="text-align: center;">
+                <p><em>Satu hewan bisa memakan dan dimakan oleh berbagai jenis hewan lain.</em></p>
+                <div class="jaring-visual">
+                    <div class="jaring-item">🥬 Sayur</div>
+                    <div class="jaring-arrow">↘️ ↗️</div>
+                    <div class="jaring-item">🐌 Siput <br> 🦗 Belalang</div>
+                    <div class="jaring-arrow">↘️ ↗️</div>
+                    <div class="jaring-item">🐸 Katak <br> 🐔 Ayam</div>
+                    <div class="jaring-arrow">➡️</div>
+                    <div class="jaring-item">🐍 Ular <br> 🦅 Elang</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="transfer-energi">
+            <h2>3. Transfer Energi & Piramida Makanan</h2>
+            <div class="energy-box">
+                <p>Matahari adalah sumber energi utama. Makhluk hidup menggunakan sekitar <strong>90% energi</strong> yang didapatkannya untuk bertahan hidup dan tumbuh. Hanya <strong>10% sisa energinya</strong> yang ditransfer ke makhluk hidup lain yang memakannya.</p>
+            </div>
+
+            <p style="margin-top: 20px;">Karena energi yang ditransfer semakin sedikit, maka populasi makhluk hidup di tingkat atas juga semakin sedikit. Ini digambarkan dalam <strong>Piramida Makanan</strong>.</p>
+
+            <div class="interactive-box">
+                <div class="pyramid-container">
+                    <div class="pyramid-level level-4" onclick="showPyramidInfo('puncak')">Elang (Konsumen 3)</div>
+                    <div class="pyramid-level level-3" onclick="showPyramidInfo('karnivora')">Katak (Konsumen 2)</div>
+                    <div class="pyramid-level level-2" onclick="showPyramidInfo('herbivora')">Siput (Konsumen 1)</div>
+                    <div class="pyramid-level level-1" onclick="showPyramidInfo('produsen')">Sayuran (Produsen)</div>
+                </div>
+                <div id="pyramid-info" class="info-panel">Klik tingkatan piramida di atas untuk melihat penjelasannya!</div>
+            </div>
+        </section>
+
+        <section id="keseimbangan">
+            <h2>4. Keseimbangan Ekosistem</h2>
+            <p>Jaring-jaring makanan adalah cara alam menjaga populasi makhluk hidup tetap terkendali. Apa yang terjadi jika ada gangguan akibat ulah manusia?</p>
+            
+            <div class="quiz-container">
+                <strong>Studi Kasus:</strong><br>
+                Apa yang dapat terjadi jika pemilik kebun membunuh semua <strong>katak</strong> yang ada di kebun?
+                
+                <div class="quiz-options">
+                    <button class="btn" onclick="cekJawaban('salah')">A. Populasi siput menurun drastis karena panen melimpah</button>
+                    <button class="btn" onclick="cekJawaban('benar')">B. Populasi siput meningkat tajam, dan ular kehilangan sumber makanan</button>
+                </div>
+                
+                <div id="quiz-feedback" class="feedback-panel"></div>
+            </div>
+        </section>
+
+        <section id="proyek-kompos">
+            <h2>5. Proyek Ekosistem: Pembuat Kompos</h2>
+            <p>Mari kita bantu dekomposer menguraikan sampah organik! Kita harus memisahkan sampah untuk bahan kompos menjadi dua kelompok (Sampah Hijau & Cokelat).</p>
+            
+            <div style="background-color: #ffcdd2; color: #b71c1c; padding: 10px; border-radius: 5px; font-size: 0.9rem; margin-bottom: 15px; border-left: 4px solid #c62828;">
+                <strong>⚠️ Ingat Eksperimen Kita (LKPD 2):</strong> Jangan masukkan bahan anorganik seperti <strong>Plastik</strong> ke dalam komposter ya! Dekomposer di tanah tidak bisa menguraikan sampah plastik.
+             </div>
+
+            <div class="sorting-game">
+                <p>Kelompokkan bahan berikut ini:</p>
+                <div class="buttons-grid">
+                    <button class="btn-item" onclick="cekSampah('hijau', 'Sayuran segar')">Sayuran Segar</button>
+                    <button class="btn-item" onclick="cekSampah('cokelat', 'Daun kering')">Daun Kering</button>
+                    <button class="btn-item" onclick="cekSampah('hijau', 'Kulit telur')">Kulit Telur</button>
+                    <button class="btn-item" onclick="cekSampah('cokelat', 'Serbuk gergaji')">Serbuk Gergaji</button>
+                </div>
+                <div id="kompos-feedback" class="feedback-panel">Klik bahan di atas untuk memilahnya.</div>
+            </div>
+        </section>
+
+        <section id="evaluasi-akhir">
+            <h2>6. Evaluasi Akhir</h2>
+            <p>Mari uji pemahamanmu tentang harmoni dalam ekosistem!</p>
+            
+            <div class="quiz-container">
+                <p><strong>1. Apa arti tanda panah (➡️) pada rantai makanan?</strong></p>
+                <div class="quiz-options">
+                    <button class="btn" onclick="cekEvaluasi(1, 'salah')">A. Menunjukkan hewan mana yang lebih kuat</button>
+                    <button class="btn" onclick="cekEvaluasi(1, 'benar')">B. Menggambarkan perpindahan/transfer energi</button>
+                </div>
+                <div id="evaluasi-feedback-1" class="feedback-panel"></div>
+
+                <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ccc;">
+
+                <p><strong>2. Pada Piramida Makanan, mengapa produsen (tumbuhan) letaknya di paling bawah dan jumlahnya paling banyak?</strong></p>
+                <div class="quiz-options">
+                    <button class="btn" onclick="cekEvaluasi(2, 'benar')">A. Karena produsen adalah sumber energi utama bagi seluruh makhluk hidup di atasnya</button>
+                    <button class="btn" onclick="cekEvaluasi(2, 'salah')">B. Karena ukuran tumbuhan lebih kecil daripada hewan</button>
+                </div>
+                <div id="evaluasi-feedback-2" class="feedback-panel"></div>
+            </div>
+        </section>
+
+        <section id="pusat-unduhan">
+            <h2>7. Pusat Unduhan & Panduan</h2>
+            <p>Bagi Bapak/Ibu Dosen, Guru, maupun rekan mahasiswa yang ingin mempelajari materi asli (Modul Ajar) dan langkah-langkah pembuatan bahan ajar interaktif ini, silakan unduh dokumen berikut:</p>
+            
+            <div class="download-container">
+                <a href="Modul_Ajar_IPAS_Kelas5.pdf" target="_blank" class="btn-download">
+                    📄 Unduh Modul Ajar (PDF)
+                </a>
+
+                <a href="Laporan_Pembuatan_Web.pdf" target="_blank" class="btn-download btn-secondary">
+                    💻 Unduh Laporan Pembuatan (PDF)
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
